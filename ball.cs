@@ -12,17 +12,19 @@ public partial class ball : CharacterBody2D
 		arrow = GetNode<Godot.Sprite2D>("arrow");
 	}
 	
+	void movement_system(InputEvent @event){
+		 if (@event.IsActionPressed("MouseClick")){
+			direction = this.GetAngleTo(GetGlobalMousePosition());
+			hit_Strenght = this.Position.DistanceTo(GetGlobalMousePosition());
+			Velocity += new Vector2(Mathf.Cos(direction), Mathf.Sin(direction)) * hit_Strenght;
+		}
+	}
+	
+	
+	
 	public override void _Input(InputEvent @event)
 	{
-		 if (@event.IsActionPressed("MouseClick")){
-				
-				direction = this.GetAngleTo(GetGlobalMousePosition());
-				
-				hit_Strenght = this.Position.DistanceTo(GetGlobalMousePosition());
-				
-				
-				Velocity += new Vector2(Mathf.Cos(direction), Mathf.Sin(direction)) * hit_Strenght;
-		}
+		movement_system(@event);
 	}
 	
 	
