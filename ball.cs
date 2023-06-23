@@ -8,9 +8,6 @@ public partial class ball : CharacterBody2D
 	float hit_Strenght;
 	
 	
-	public override void _Ready(){
-		arrow = GetNode<Godot.Sprite2D>("arrow");
-	}
 	
 	void movement_system(InputEvent @event){
 		 if (@event.IsActionPressed("MouseClick")){
@@ -20,7 +17,15 @@ public partial class ball : CharacterBody2D
 		}
 	}
 	
+	void Bounce(KinematicCollision2D collisionInfo, Double delta){
+		if (collisionInfo != null){
+			Velocity = Velocity.Bounce(collisionInfo.GetNormal());
+		}
+	}
 	
+	public override void _Ready(){
+		arrow = GetNode<Godot.Sprite2D>("arrow");
+	}
 	
 	public override void _Input(InputEvent @event)
 	{
@@ -36,9 +41,11 @@ public partial class ball : CharacterBody2D
 		
 		arrow.Scale = new Vector2(1,arrow.GlobalPosition.DistanceTo(GetGlobalMousePosition())/32);
 		
+		KinematicCollision2D collisionInfo = MoveAndCollide(Velocity * (float)delta);
 		
+		Bounce(collisionInfo, delta);
 		
+		Velocity = new Vector2(Velocity[0]* 0.99f, Velocity[1]* 0.99f);
 		
-		var collisionInfo = MoveAndCollide(Velocity * (float)delta);
 	}
 }
