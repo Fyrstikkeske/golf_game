@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnvxdqmxqp8au"]
+
+[ext_resource type="Script" path="res://end_scene.cs" id="1_uh4r0"]
+[ext_resource type="PackedScene" uid="uid://bnlm2qg3v48yw" path="res://not_gonna_sugar_coat_it.tscn" id="2_k75oo"]
+[ext_resource type="VideoStream" path="res://youdidit.ogv" id="3_wlcau"]
+
+[node name="EndScene" type="Node2D"]
+script = ExtResource("1_uh4r0")
+
+[node name="NotGonnaSugarCoatIt" parent="." instance=ExtResource("2_k75oo")]
+
+[node name="FinalPointsText" type="RichTextLabel" parent="."]
+offset_right = 1153.0
+offset_bottom = 650.0
+bbcode_enabled = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = 3.0
+offset_top = 278.0
+offset_right = 643.0
+offset_bottom = 646.0
+stream = ExtResource("3_wlcau")
+autoplay = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = -31.0
+offset_right = 426.0
+offset_bottom = 9.0
+text = "Perfect Score"

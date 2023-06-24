@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://pywuv7l7bhx8"]
+
+[ext_resource type="PackedScene" uid="uid://wfmyf08w1g7r" path="res://ball.tscn" id="1_nsvm2"]
+[ext_resource type="PackedScene" uid="uid://bptxwu2txl5gd" path="res://wall.tscn" id="2_4m6ub"]
+[ext_resource type="PackedScene" uid="uid://btoc7m3brbrfm" path="res://key.tscn" id="3_bq2u6"]
+[ext_resource type="PackedScene" uid="uid://qyyffyrk04yq" path="res://see_points.tscn" id="4_igatm"]
+[ext_resource type="PackedScene" uid="uid://bnlm2qg3v48yw" path="res://not_gonna_sugar_coat_it.tscn" id="5_n2vfl"]
+
+[node name="Level5" type="Node2D"]
+
+[node name="ball" parent="." instance=ExtResource("1_nsvm2")]
+position = Vector2(164, 128)
+
+[node name="wall" parent="." instance=ExtResource("2_4m6ub")]
+position = Vector2(24, 326)
+scale = Vector2(0.612601, 8.35364)
+
+[node name="wall2" parent="." instance=ExtResource("2_4m6ub")]
+position = Vector2(578, 20)
+scale = Vector2(13.6868, 0.726545)
+
+[node name="wall3" parent="." instance=ExtResource("2_4m6ub")]
+position = Vector2(632, 624)
+scale = Vector2(15.1567, 0.783739)
+
+[node name="wall4" parent="." instance=ExtResource("2_4m6ub")]
+position = Vector2(1129, 313)
+scale = Vector2(0.570769, 8.00505)
+
+[node name="Key" parent="." instance=ExtResource("3_bq2u6")]
+position = Vector2(792, 297)
+
+[node name="NextLevel" type="RichTextLabel" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+text = "res://level_2.tscn"
+
+[node name="SeePoints" parent="." instance=ExtResource("4_igatm")]
+metadata/_edit_use_anchors_ = true
+
+[node name="NotGonnaSugarCoatIt" parent="." instance=ExtResource("5_n2vfl")]

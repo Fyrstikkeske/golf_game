@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b60754nskmbxp"]
+
+[ext_resource type="AudioStream" uid="uid://b16s1tscyjg76" path="res://the_penis.mp3" id="1_uxtyp"]
+
+[node name="BackGroundMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_uxtyp")
+volume_db = -11.415

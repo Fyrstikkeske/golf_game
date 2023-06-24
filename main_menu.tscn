@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cempqoemf70yo"]
+[gd_scene load_steps=3 format=3 uid="uid://cempqoemf70yo"]
 
 [ext_resource type="Script" path="res://main_menu.cs" id="1_tbqai"]
+[ext_resource type="AudioStream" uid="uid://c73ay6t3nxrdw" path="res://Sneaky_Snitch.mp3" id="2_yy8th"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_tbqai")
@@ -20,5 +21,19 @@ offset_top = 306.0
 offset_right = 617.0
 offset_bottom = 360.0
 text = "The Start Button"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(470, 306)
+stream = ExtResource("2_yy8th")
+volume_db = -5.073
+autoplay = true
+
+[node name="License" type="RichTextLabel" parent="."]
+offset_left = 37.0
+offset_top = 604.0
+offset_right = 381.0
+offset_bottom = 630.0
+text = "music: Sneaky snitch by Kevin Macleod
+"
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

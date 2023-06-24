@@ -9,7 +9,7 @@
 [node name="Level4" type="Node2D"]
 
 [node name="ball" parent="." instance=ExtResource("1_nr5vy")]
-position = Vector2(70, 250)
+position = Vector2(68, 325)
 
 [node name="wall" parent="." instance=ExtResource("2_x64um")]
 position = Vector2(24, 326)
@@ -34,7 +34,7 @@ position = Vector2(78, 78)
 visible = false
 offset_right = 40.0
 offset_bottom = 40.0
-text = "res://level_2.tscn"
+text = "res://end_scene.tscn"
 
 [node name="SeePoints" parent="." instance=ExtResource("4_6aqak")]
 metadata/_edit_use_anchors_ = true
@@ -42,5 +42,5 @@ metadata/_edit_use_anchors_ = true
 [node name="NotGonnaSugarCoatIt" parent="." instance=ExtResource("5_bowbo")]
 
 [node name="wall5" parent="." instance=ExtResource("2_x64um")]
-position = Vector2(422, 131)
+position = Vector2(416, 156)
 scale = Vector2(13.6868, 0.726545)

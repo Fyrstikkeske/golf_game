@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbxcsngbkpmak"]
+[gd_scene load_steps=7 format=3 uid="uid://dbxcsngbkpmak"]
 
+[ext_resource type="Script" path="res://level_1.cs" id="1_jbtwa"]
 [ext_resource type="PackedScene" uid="uid://wfmyf08w1g7r" path="res://ball.tscn" id="1_rs2sk"]
 [ext_resource type="PackedScene" uid="uid://bptxwu2txl5gd" path="res://wall.tscn" id="2_4xjq4"]
 [ext_resource type="PackedScene" uid="uid://btoc7m3brbrfm" path="res://key.tscn" id="3_errpy"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bnlm2qg3v48yw" path="res://not_gonna_sugar_coat_it.tscn" id="5_6hbkp"]
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_jbtwa")
 
 [node name="ball" parent="." instance=ExtResource("1_rs2sk")]
 position = Vector2(164, 128)
