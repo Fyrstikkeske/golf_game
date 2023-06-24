@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://qyyffyrk04yq"]
+
+[ext_resource type="Script" path="res://see_points.cs" id="1_qjshx"]
+
+[node name="SeePoints" type="RichTextLabel"]
+offset_left = 475.0
+offset_top = 51.0
+offset_right = 586.0
+offset_bottom = 91.0
+script = ExtResource("1_qjshx")

@@ -1,8 +1,10 @@
 using Godot;
+using System;
 
 public partial class GlobalVar : Node
 {
 	
-	public int Points;
+	public Int32 Points;
 	
+	public bool LoadNotGonnaSugarCoatIt;
 } 

@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbxcsngbkpmak"]
+[gd_scene load_steps=6 format=3 uid="uid://dbxcsngbkpmak"]
 
 [ext_resource type="PackedScene" uid="uid://wfmyf08w1g7r" path="res://ball.tscn" id="1_rs2sk"]
 [ext_resource type="PackedScene" uid="uid://bptxwu2txl5gd" path="res://wall.tscn" id="2_4xjq4"]
 [ext_resource type="PackedScene" uid="uid://btoc7m3brbrfm" path="res://key.tscn" id="3_errpy"]
+[ext_resource type="PackedScene" uid="uid://qyyffyrk04yq" path="res://see_points.tscn" id="4_1ltu1"]
+[ext_resource type="PackedScene" uid="uid://bnlm2qg3v48yw" path="res://not_gonna_sugar_coat_it.tscn" id="5_6hbkp"]
 
 [node name="Level1" type="Node2D"]
 
@@ -28,8 +30,14 @@ scale = Vector2(0.570769, 8.00505)
 [node name="Key" parent="." instance=ExtResource("3_errpy")]
 position = Vector2(792, 297)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="NextLevel" type="RichTextLabel" parent="."]
 visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 text = "res://level_2.tscn"
+
+[node name="SeePoints" parent="." instance=ExtResource("4_1ltu1")]
+metadata/_edit_use_anchors_ = true
+
+[node name="NotGonnaSugarCoatIt" parent="." instance=ExtResource("5_6hbkp")]
+visible = false
