@@ -1,3 +1,6 @@
+//ting å lag
+//main menu(easyish), mål(mediumIsh)
+
 using Godot;
 using System;
 
@@ -7,13 +10,14 @@ public partial class ball : CharacterBody2D
 	float direction;
 	float hit_Strenght;
 	
-	
+	GlobalVar globalvar;
 	
 	void movement_system(InputEvent @event){
 		 if (@event.IsActionPressed("MouseClick")){
 			direction = this.GetAngleTo(GetGlobalMousePosition());
 			hit_Strenght = this.Position.DistanceTo(GetGlobalMousePosition());
 			Velocity += new Vector2(Mathf.Cos(direction), Mathf.Sin(direction)) * hit_Strenght;
+			globalvar.Points += 1;
 		}
 	}
 	
@@ -25,11 +29,13 @@ public partial class ball : CharacterBody2D
 	
 	public override void _Ready(){
 		arrow = GetNode<Godot.Sprite2D>("arrow");
+		globalvar = (GlobalVar)GetNode("/root/GlobalVar");
 	}
 	
 	public override void _Input(InputEvent @event)
 	{
 		movement_system(@event);
+		
 	}
 	
 	
