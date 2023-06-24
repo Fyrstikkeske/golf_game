@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2sgipggu7r1t"
-path="res://.godot/imported/notgonnasugarcoatit.jpg-f52683761263e06b9900bd83ec669ef5.ctex"
+uid="uid://cium4o64dkg86"
+path="res://.godot/imported/ImNotGonnaSugarCoatIt.png-01095fdcd5e7bf60af3301584dd9a44c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://notgonnasugarcoatit.jpg"
-dest_files=["res://.godot/imported/notgonnasugarcoatit.jpg-f52683761263e06b9900bd83ec669ef5.ctex"]
+source_file="res://ImNotGonnaSugarCoatIt.png"
+dest_files=["res://.godot/imported/ImNotGonnaSugarCoatIt.png-01095fdcd5e7bf60af3301584dd9a44c.ctex"]
 
 [params]
 

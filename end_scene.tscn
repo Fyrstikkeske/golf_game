@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnvxdqmxqp8au"]
+[gd_scene load_steps=5 format=3 uid="uid://bnvxdqmxqp8au"]
 
 [ext_resource type="Script" path="res://end_scene.cs" id="1_uh4r0"]
 [ext_resource type="PackedScene" uid="uid://bnlm2qg3v48yw" path="res://not_gonna_sugar_coat_it.tscn" id="2_k75oo"]
 [ext_resource type="VideoStream" path="res://youdidit.ogv" id="3_wlcau"]
+[ext_resource type="AudioStream" uid="uid://jvwlwtppqn8k" path="res://superstarxsneakysnitch.mp3" id="4_8x74d"]
 
 [node name="EndScene" type="Node2D"]
 script = ExtResource("1_uh4r0")
@@ -10,9 +11,25 @@ script = ExtResource("1_uh4r0")
 [node name="NotGonnaSugarCoatIt" parent="." instance=ExtResource("2_k75oo")]
 
 [node name="FinalPointsText" type="RichTextLabel" parent="."]
-offset_right = 1153.0
-offset_bottom = 650.0
+offset_left = 397.0
+offset_right = 858.0
+offset_bottom = 121.0
 bbcode_enabled = true
+
+[node name="Back To Main Meny" type="Button" parent="."]
+offset_left = 876.0
+offset_top = 195.0
+offset_right = 1073.0
+offset_bottom = 237.0
+text = "Back To The Main Meny"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 267.0
+offset_top = 187.0
+offset_right = 620.0
+offset_bottom = 242.0
+text = "Best i got was 11
+get the same or better for a secret"
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 visible = false
@@ -25,8 +42,23 @@ autoplay = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VideoStreamPlayer"]
 layout_mode = 0
-offset_left = 259.0
-offset_top = -31.0
-offset_right = 426.0
-offset_bottom = 9.0
-text = "Best i got"
+offset_left = 762.0
+offset_top = -4.0
+offset_right = 1014.0
+offset_bottom = 21.0
+text = "Secret Here ->"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_8x74d")
+volume_db = -8.244
+autoplay = true
+
+[node name="Back To Level 1" type="Button" parent="."]
+offset_left = 876.0
+offset_top = 266.0
+offset_right = 1073.0
+offset_bottom = 308.0
+text = "Back To Level 1"
+
+[connection signal="button_down" from="Back To Main Meny" to="." method="_on_back_to_main_meny_button_down"]
+[connection signal="button_down" from="Back To Level 1" to="." method="_on_back_to_level_1_button_down"]

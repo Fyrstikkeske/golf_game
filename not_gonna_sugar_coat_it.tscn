@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bnlm2qg3v48yw"]
 
 [ext_resource type="AudioStream" uid="uid://bygj0t0ia5oh8" path="res://notgonnasugarcoatit.mp3" id="1_2ubod"]
-[ext_resource type="Texture2D" uid="uid://2sgipggu7r1t" path="res://notgonnasugarcoatit.jpg" id="1_ul74n"]
 [ext_resource type="Script" path="res://not_gonna_sugar_coat_it.cs" id="1_we7w5"]
+[ext_resource type="Texture2D" uid="uid://cium4o64dkg86" path="res://ImNotGonnaSugarCoatIt.png" id="1_xmbmk"]
 
 [sub_resource type="Animation" id="Animation_p7ynq"]
 resource_name = "NotGonnaSugarCoatItAnimation"
@@ -57,10 +57,9 @@ _data = {
 }
 
 [node name="NotGonnaSugarCoatIt" type="Sprite2D"]
-visible = false
 position = Vector2(559, 323)
-scale = Vector2(0.527, 0.527)
-texture = ExtResource("1_ul74n")
+scale = Vector2(4.5053, 4.73782)
+texture = ExtResource("1_xmbmk")
 script = ExtResource("1_we7w5")
 
 [node name="NotGonnaSugarCoatItAudio" type="AudioStreamPlayer2D" parent="."]

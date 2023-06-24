@@ -10,6 +10,7 @@ public partial class ball : CharacterBody2D
 	float direction;
 	float hit_Strenght;
 	
+	
 	GlobalVar globalvar;
 	
 	void movement_system(InputEvent @event){
@@ -30,6 +31,17 @@ public partial class ball : CharacterBody2D
 	public override void _Ready(){
 		arrow = GetNode<Godot.Sprite2D>("arrow");
 		globalvar = (GlobalVar)GetNode("/root/GlobalVar");
+		switch(globalvar.SecretUnlocked){
+			case false:
+				this.GetNode<Sprite2D>("ball").Visible = true;
+				this.GetNode<Sprite2D>("secretsprite").Visible = false;
+				break;
+			case true:
+				this.GetNode<Sprite2D>("ball").Visible = false;
+				this.GetNode<Sprite2D>("secretsprite").Visible = true;
+				break;
+			
+		}
 	}
 	
 	public override void _Input(InputEvent @event)
