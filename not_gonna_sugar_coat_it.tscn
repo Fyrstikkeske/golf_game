@@ -58,6 +58,7 @@ _data = {
 
 [node name="NotGonnaSugarCoatIt" type="Sprite2D"]
 visible = false
+top_level = true
 position = Vector2(559, 323)
 scale = Vector2(4.5053, 4.73782)
 texture = ExtResource("1_xmbmk")
