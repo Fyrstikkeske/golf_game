@@ -15,6 +15,7 @@ offset_bottom = 650.0
 bbcode_enabled = true
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+visible = false
 offset_left = 3.0
 offset_top = 278.0
 offset_right = 643.0
@@ -28,4 +29,4 @@ offset_left = 259.0
 offset_top = -31.0
 offset_right = 426.0
 offset_bottom = 9.0
-text = "Perfect Score"
+text = "Best i got"

@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnv65a4ij1dtt"]
+
+[ext_resource type="PackedScene" uid="uid://wfmyf08w1g7r" path="res://ball.tscn" id="2_2eb7q"]
+[ext_resource type="PackedScene" uid="uid://bptxwu2txl5gd" path="res://wall.tscn" id="3_jdibc"]
+[ext_resource type="PackedScene" uid="uid://btoc7m3brbrfm" path="res://key.tscn" id="4_vlxge"]
+[ext_resource type="PackedScene" uid="uid://qyyffyrk04yq" path="res://see_points.tscn" id="5_22wg4"]
+[ext_resource type="PackedScene" uid="uid://bnlm2qg3v48yw" path="res://not_gonna_sugar_coat_it.tscn" id="6_woc17"]
+[ext_resource type="PackedScene" uid="uid://b1xl8w2724ti8" path="res://trollwall.tscn" id="7_nyulu"]
+
+[node name="Level6" type="Node2D"]
+
+[node name="ball" parent="." instance=ExtResource("2_2eb7q")]
+position = Vector2(143, 94)
+
+[node name="wall" parent="." instance=ExtResource("3_jdibc")]
+position = Vector2(24, 326)
+scale = Vector2(0.612601, 8.35364)
+
+[node name="wall2" parent="." instance=ExtResource("3_jdibc")]
+position = Vector2(578, 20)
+scale = Vector2(13.6868, 0.726545)
+
+[node name="wall3" parent="." instance=ExtResource("3_jdibc")]
+position = Vector2(632, 624)
+scale = Vector2(15.1567, 0.783739)
+
+[node name="wall4" parent="." instance=ExtResource("3_jdibc")]
+position = Vector2(1129, 313)
+scale = Vector2(0.570769, 8.00505)
+
+[node name="Key" parent="." instance=ExtResource("4_vlxge")]
+position = Vector2(456, 92)
+
+[node name="NextLevel" type="RichTextLabel" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+text = "res://level_7.tscn"
+
+[node name="SeePoints" parent="." instance=ExtResource("5_22wg4")]
+metadata/_edit_use_anchors_ = true
+
+[node name="NotGonnaSugarCoatIt" parent="." instance=ExtResource("6_woc17")]
+
+[node name="wall5" parent="." instance=ExtResource("3_jdibc")]
+position = Vector2(375, 303)
+scale = Vector2(0.623221, 4.24812)
+
+[node name="trollwall" parent="." instance=ExtResource("7_nyulu")]
+position = Vector2(375, 92)
+scale = Vector2(0.62437, 1.08445)

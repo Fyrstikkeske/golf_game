@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1gfh8phm1tdb"]
+
+[ext_resource type="Script" path="res://obstacle.cs" id="1_3u78w"]
+[ext_resource type="Texture2D" uid="uid://cdf540ud1ngkq" path="res://key.png" id="1_yl0k8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bpejb"]
+radius = 6.36396
+height = 28.2843
+
+[node name="obstacle" type="RigidBody2D"]
+collision_layer = 0
+gravity_scale = 0.0
+script = ExtResource("1_3u78w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+rotation = 0.785398
+shape = SubResource("CapsuleShape2D_bpejb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yl0k8")
