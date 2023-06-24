@@ -40,4 +40,3 @@ text = "res://level_2.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="NotGonnaSugarCoatIt" parent="." instance=ExtResource("5_6hbkp")]
-visible = false

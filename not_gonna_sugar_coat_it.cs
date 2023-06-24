@@ -15,6 +15,7 @@ public partial class not_gonna_sugar_coat_it : Sprite2D
 		if (globalvar.LoadNotGonnaSugarCoatIt == true){
 			this.Visible = true;
 			notgonnasugarcoatitanimationplayer.Play("NotGonnaSugarCoatItAnimation");
+			globalvar.LoadNotGonnaSugarCoatIt = false;
 		}
 	}
 }
